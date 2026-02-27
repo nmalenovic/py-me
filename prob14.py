@@ -5,10 +5,7 @@ class Point():
         self.y = y
 
 class ListOfPoints():
-    def __init__(self, points):
-        """ ListOfPoints has one attribute, which is a list.
-        The elements are Point objects
-        """
+    def __init__(self, points): # ListOfPoints has points attribute that's a list of Point objects
         self.points = list(points)
         
     def __len__(self):
@@ -21,6 +18,8 @@ class ListOfPoints():
             print ( 'Case 2: LoP * P' )
         elif ( type ( other ) is int ):
             print ( 'Case 3: LoP * int' )
+            # loop through LoP's Points, and multiply each Point's x and y by other
+            
         else:
             print ( 'Case 4: LoP * anything other then LoP, P, int' )
         
@@ -43,7 +42,7 @@ print ( f"A#2: result = {result}" )
 
 # --------------------------
 print ( f"case 3: LoP * int" )
-other = 4
+other = 3
 result = lop * other
 print ( f"E#3: result = [ (3,6), (15,15) ]" )
 print ( f"A#3: result = {result}" )
